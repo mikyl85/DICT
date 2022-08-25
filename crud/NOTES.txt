@@ -1,0 +1,29 @@
+To get started run the following SQL commands:
+
+CREATE DATABASE misc;
+GRANT ALL ON misc.* TO 'root'@'localhost' IDENTIFIED BY '';
+GRANT ALL ON misc.* TO 'root'@'127.0.0.1' IDENTIFIED BY '';
+
+USE misc; (Or select misc in phpMyAdmin)
+
+CREATE TABLE users (
+   user_id INTEGER NOT NULL
+     AUTO_INCREMENT KEY,
+   name VARCHAR(128),
+   email VARCHAR(128),
+   password VARCHAR(128),
+   INDEX(email)
+) ENGINE=InnoDB CHARSET=utf8;
+
+--- POSTGRES
+Step 1: Find file postgresql.conf in C:\Program Files\PostgreSQL\13\data then set password_encryption = md5
+Step 2: Find file pg_hba.conf in C:\Program Files\PostgreSQL\13\data then change all METHOD to md5
+Step 3: Open command line (cmd,cmder,git bash...) and run psql -U postgres then enter your password when installed postgres sql
+Step 4: Then change your password by run ALTER USER postgres WITH PASSWORD 'new-password'; in command line
+	
+CREATE TABLE users (
+   user_id SERIAL PRIMARY KEY,
+   name VARCHAR(128),
+   email VARCHAR(128),
+   password VARCHAR(128)
+);
