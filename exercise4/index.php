@@ -7,7 +7,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP Demo</title>
+    <title>PHP/AJAX Exercise</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -15,11 +15,16 @@ session_start();
 
 </head>
   <body class="container-fluid">
-   
-    <div class="col-12">
-      <button data-bs-toggle="modal" data-bs-target="#userModal"  onclick="EditUser(0)" class="btn btn-xs btn-primary m-3">New User Information</button>
-        <div id="table-data"></div>
+    <div class="row justify-content-center">
+      <div class="col-8 text-center mt-5">
+        <h1>Exercise 4 | PHP/AJAX</h1>
+      </div>
+      <div class="col-12 ">
+        <button data-bs-toggle="modal" data-bs-target="#userModal"  onclick="EditUser(0)" class="float-end btn btn-xs btn-primary m-3">New User Information</button>
+          <div id="table-data"></div>
+      </div>
     </div>
+    
   
 
 

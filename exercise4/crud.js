@@ -14,7 +14,7 @@ function GetUserTable()
         response = $.parseJSON(response);
        
         $('#table-data').html("");
-        var table = "<table class='table table-responsive table-striped'>";
+        var table = "<table class='table table-responsive table-striped table-bordered table-hover'>";
         table  += "<thead>" +
             "<tr>" +
             "<th class=\"text-center\">Name</th>" +
@@ -131,10 +131,7 @@ $(function(){
         else
         {
             $.post("save.php",{ user_id: user_id, name: name, email: email, password: password  }, function(response){
-
-               // console.log(response.replace(/\r?\n|\r/g, ""));
-                //var i = response.replace(/\r?\n|\r/g,"");
-               
+ 
                 response = $.parseJSON(response);
                
                
